@@ -1,4 +1,4 @@
-TOKEN = '5495117495:AAHOKZkQSQYfSpirzKL-xv1bDo_t1rEdFEg'                # токен
+TOKEN = ' '                # токен
 
 keys = {                                # список валют
     'рубли' : 'RUB',
