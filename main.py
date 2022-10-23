@@ -1,6 +1,6 @@
 import telebot
 from config import keys, TOKEN
-from utils import ConvertionException, MonetaryConverter
+from extensions import ConvertionException, MonetaryConverter
 
 
 bot = telebot.TeleBot(TOKEN)                # инициализируем телебот.
@@ -33,7 +33,7 @@ def convert(message: telebot.types.Message):
             raise ConvertionException('Слишком мало параметров')
 
         quote, base, amount = values
-        d = MonetaryConverter.convertor(quote, base, amount)
+        d = MonetaryConverter.get_price(quote, base, amount)
     except ConvertionException as e:
         bot.reply_to(message, f'Ошибка пользователя.\n{e}')
     except Exception as e:
