@@ -30,7 +30,7 @@ class MonetaryConverter:
 
             url = f"https://api.apilayer.com/currency_data/convert?to={base_ticker}&from={quote_ticker}&amount={amount}"    #получаем результат конверта по API
             payload = {}
-            headers = {"apikey": "P0yJ3Y5m5HF9oBVdAbpR2GuAXn1eMuYh"}
+            headers = {"apikey": " "}
             response = requests.get(url, headers=headers, data=payload)
             d = json.loads(response.content)
 
