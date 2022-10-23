@@ -39,7 +39,7 @@ def convert(message: telebot.types.Message):
     except Exception as e:
         bot.reply_to(message, f'Не удалось обработать команду\n{e}')
     else:
-        result = f"{round(d['result'], 2)} {keys[base]}"
+        result = f"{round(d['result'], 2)} {keys[base]}"                # печать результата 
         bot.send_message(message.chat.id, result)
 
 
